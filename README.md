@@ -1,49 +1,48 @@
-# 脚本集合
+# kumpulan Script
 
-具体内容包括：
-* 时间区域修改
-* BBR加速
-* WARP
-* trojan-go搭建
-* sing-box搭建（支持Shadowsocks、ShadowTLS、Trojan一键配置）
-* 流媒体检测
-* 回程线路测试
-* 三网下载测试
+Konten khusus meliputi:
 
-### 合集脚本使用
+- Modifikasi zona waktu
+- Akselerasi BBR
+- Warp
+- trojan-go build
+- konstruksi kotak-sing (mendukung Shadowsocks, ShadowTLS, konfigurasi sekali klik Trojan)
+- Deteksi streaming
+- Tes garis backhaul
+- Tes unduhan jaringan
 
-```
-wget -N --no-check-certificate https://raw.githubusercontent.com/yuehen7/scripts/main/main.sh && chmod +x main.sh && bash main.sh
-```
-
-sing-box安装后可直接使用sing-box命令
-
-### sing-box一键脚本使用
-
-该脚本使用nginx前置进行vmess和trojan分流，自动创建静态网站进行伪装.
-* vmess+ws+tls
-* trojan+ws+tls
-* shadowsocks
+### Penggunaan skrip koleksi
 
 ```
-bash <(curl -s -L https://raw.githubusercontent.com/yuehen7/scripts/main/onekey.sh)
+wget -N --no-check-certificate https://raw.githubusercontent.com/DhimasArbi/scripts/main/main.sh && chmod +x main.sh && bash main.sh
 ```
 
-0. 退出脚本
-1. 安装 sing-box 服务
-2. 更新 sing-box 服务
-3. 卸载 sing-box 服务
-4. 启动 sing-box 服务
-5. 停止 sing-box 服务
-6. 重启 sing-box 服务
-7. 检查 sing-box 配置
-8. 查看 sing-box 配置
+Setelah sing-box terinstal, Anda dapat menggunakan perintah sing-box secara langsung
 
+### penggunaan skrip onekey sing-box
 
+Skrip ini menggunakan nginx prepend untuk vmess dan trojan shunting, dan secara otomatis membuat situs web statis untuk kamuflase.
 
+- vmess+ws+tls
+- trojan+ws+tls
+- shadowsocks
 
+```
+bash <(curl -s -L https://raw.githubusercontent.com/DhimasArbi/scripts/main/onekey.sh)
+```
 
-# 致谢  
+0. Keluar dari skrip
+1. Instal layanan kotak bernyanyi
+2. Perbarui layanan kotak bernyanyi
+3. Copot layanan sing-box
+4. Mulai layanan kotak-bernyanyi
+5. Hentikan layanan kotak-bernyanyi
+6. Mulai ulang layanan kotak-bernyanyi
+7. Periksa konfigurasi sing-box
+8. Lihat konfigurasi kotak bernyanyi
+
+# terima kasih
+
 [FranzKafkaYu/sing-box-yes](https://github.com/FranzKafkaYu/sing-box-yes)
 <br/>
-[SagerNet/sing-box](https://github.com/SagerNet/sing-box)  
+[SagerNet/sing-box](https://github.com/SagerNet/sing-box)
