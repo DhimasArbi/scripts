@@ -641,7 +641,7 @@ server {
 
   location /vmess {
     proxy_redirect off;
-    proxy_pass http://127.0.0.1:33210;
+    proxy_pass http://127.0.0.1:443;
     proxy_http_version 1.1;
     proxy_set_header Upgrade \$http_upgrade;
     proxy_set_header Connection "upgrade";
@@ -653,7 +653,7 @@ server {
 
   location /trojan {
     proxy_redirect off;
-    proxy_pass http://127.0.0.1:33211;
+    proxy_pass http://127.0.0.1:443;
     proxy_http_version 1.1;
     proxy_set_header Upgrade \$http_upgrade;
     proxy_set_header Connection "upgrade";
@@ -674,7 +674,7 @@ server {
 
   location /vmess {
     proxy_redirect off;
-    proxy_pass http://127.0.0.1:33210;
+    proxy_pass http://127.0.0.1:443;
     proxy_http_version 1.1;
     proxy_set_header Upgrade \$http_upgrade;
     proxy_set_header Connection "upgrade";
@@ -686,7 +686,7 @@ server {
 
   location /trojan {
     proxy_redirect off;
-    proxy_pass http://127.0.0.1:33211;
+    proxy_pass http://127.0.0.1:443;
     proxy_http_version 1.1;
     proxy_set_header Upgrade \$http_upgrade;
     proxy_set_header Connection "upgrade";
@@ -974,6 +974,7 @@ setFirewall() {
       if [[ "$nl" != "3" ]]; then
         iptables -I INPUT -p tcp --dport 80 -j ACCEPT
         iptables -I INPUT -p tcp --dport 443 -j ACCEPT
+        iptables -I INPUT -p tcp --dport 442 -j ACCEPT
         iptables -I INPUT -p tcp --dport ${port_ss} -j ACCEPT
         if [[ "$port" != "443" ]]; then
           iptables -I INPUT -p tcp --dport ${port} -j ACCEPT
@@ -987,6 +988,7 @@ setFirewall() {
       if [[ "$nl" != "3" ]]; then
         iptables -I INPUT -p tcp --dport 80 -j ACCEPT
         iptables -I INPUT -p tcp --dport 443 -j ACCEPT
+        iptables -I INPUT -p tcp --dport 442 -j ACCEPT
         iptables -I INPUT -p tcp --dport ${port_ss} -j ACCEPT
         if [[ "$port" != "443" ]]; then
           iptables -I INPUT -p tcp --dport ${port} -j ACCEPT
